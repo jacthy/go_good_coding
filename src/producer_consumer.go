@@ -8,7 +8,7 @@ import (
 )
 
 func main1() {
-	ch :=make(chan int)
+	ch := make(chan int)
 	wg := sync.WaitGroup{}
 	// 启动1个生产者
 	wg.Add(1)
@@ -21,7 +21,7 @@ func main1() {
 		go consumer(ch)
 	}
 
-	for  {
+	for {
 	}
 }
 
@@ -29,7 +29,7 @@ func producer(ch chan int) {
 	for i := 0; i < 10; i++ {
 		println("producer produce val: ", i)
 		ch <- i
-		time.Sleep(300*time.Millisecond)
+		time.Sleep(300 * time.Millisecond)
 	}
 }
 
@@ -38,9 +38,6 @@ func consumer(ch chan int) {
 		println("consumer get val:", val)
 	}
 }
-
-
-
 
 // 使用goroutine和channel实现一个计算int64随机数各位和的程序
 
@@ -57,7 +54,7 @@ type result struct {
 func producer2(jobChan chan<- *job, wg *sync.WaitGroup) {
 	defer wg.Done()
 	// 1. 开启一个goroutine循环生成int64随机数，发送到jobChan
-	for{
+	for {
 		x := rand.Int63()
 		// 生产者产生“货物”
 		newJob := &job{
@@ -73,9 +70,9 @@ func producer2(jobChan chan<- *job, wg *sync.WaitGroup) {
 func consumer2(jobChan <-chan *job, resultChan chan<- *result, wg *sync.WaitGroup) {
 	// 2. 从jobChan中取出随机数计算个位数的和，将结果发送到resultChan
 	defer wg.Done()
-	for{
+	for {
 		// 读取原数据
-		job := <- jobChan
+		job := <-jobChan
 		var sum int64 = 0
 		n := job.val
 		// 计算各位和
@@ -101,18 +98,17 @@ func main2() {
 	go producer2(jobChan, &wg)
 	// 开启24个goroutine
 	wg.Add(24)
-	for i := 0; i < 24; i++{
+	for i := 0; i < 24; i++ {
 		go consumer2(jobChan, resultChan, &wg)
 	}
 	// 3. 主goroutine从resultChan取出结果并打印在console
 	i := 0
-	for result := range resultChan{
+	for result := range resultChan {
 		i++
 		fmt.Printf("value: %d sum: %d count: %d\n", result.job.val, result.sum, i)
 	}
 	wg.Wait()
 }
-
 
 // -----------------------------
 func main4() {

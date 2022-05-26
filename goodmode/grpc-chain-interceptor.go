@@ -46,7 +46,7 @@ func ChainInterceptor(interceptorArr ...Interceptor) Interceptor {
 		}
 		chanHandler := handler
 		// 倒序是为了顺序执行拦截器
-		for i := n-1; i >= 0; i-- {
+		for i := n - 1; i >= 0; i-- {
 			// 实际上的handler函数在这里被层层传递进去拦截器链中
 			chanHandler = chainerFunc(interceptorArr[i], chanHandler)
 		}

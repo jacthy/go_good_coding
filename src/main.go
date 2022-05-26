@@ -12,16 +12,16 @@ import (
 func main() {
 	var a interface{}
 	i := 1
-	a=i
+	a = i
 	k := a.(int)
 	println(k)
 }
 
-func case1(ch,ch2 chan int)  {
+func case1(ch, ch2 chan int) {
 	select {
 	case ch <- 1:
 		println(1)
-	case <- ch2:
+	case <-ch2:
 		println(2)
 	}
 }
@@ -35,7 +35,6 @@ func case3() bool {
 }
 
 type i interface {
-
 }
 
 //1
@@ -49,72 +48,71 @@ type S struct {
 	Age int
 }
 
-func(s S) Get()int {
+func (s S) Get() int {
 	return s.Age
 }
 
-func(s S) Set(age int) {
+func (s S) Set(age int) {
 	s.Age = age
 }
 
 //3
-func f(i I){
+func f(i I) {
 	i.Set(10)
 	fmt.Println(i.Get())
 }
 
-
 func testGoSort(x int) {
-	chanList := make([]chan struct{},0)
+	chanList := make([]chan struct{}, 0)
 	for i := 0; i <= x; i++ {
 		//chanList = append(chanList, make(chan struct{}))
 	}
 	stopChan := make(chan struct{})
 	for i := 0; i <= x; i++ {
-		go func(chList []chan struct{},index int) {
+		go func(chList []chan struct{}, index int) {
 			<-chanList[index]
-			fmt.Println(index,"done")
+			fmt.Println(index, "done")
 			if index == x {
 				stopChan <- struct{}{}
-			}else {
-				chanList[index+1]<- struct{}{}
+			} else {
+				chanList[index+1] <- struct{}{}
 			}
-		}(chanList,i)
+		}(chanList, i)
 	}
-	chanList[0]<- struct{}{}
+	chanList[0] <- struct{}{}
 	select {
-		case <- stopChan:
-			println("done")
+	case <-stopChan:
+		println("done")
 	}
 }
 
-func ttttt(x int)  {
-	chanList := make([]chan struct{},0)
+func ttttt(x int) {
+	chanList := make([]chan struct{}, 0)
 	for i := 0; i <= x; i++ {
 		chanList = append(chanList, make(chan struct{}))
 	}
 	stopChan := make(chan struct{})
 	for i := 0; i <= x; i++ {
-		go func(chList []chan struct{},index int) {
+		go func(chList []chan struct{}, index int) {
 			if index == 0 {
-				fmt.Println(index,"done")
-				chanList[index+1]<- struct{}{}
+				fmt.Println(index, "done")
+				chanList[index+1] <- struct{}{}
 				return
 			}
 			if index == x {
 				<-chanList[index]
-				fmt.Println(index,"done")
+				fmt.Println(index, "done")
 				stopChan <- struct{}{}
 				return
-			}else {
+			} else {
 				<-chanList[index]
-				fmt.Println(index,"done")
-				chanList[index+1]<- struct{}{}
+				fmt.Println(index, "done")
+				chanList[index+1] <- struct{}{}
 			}
-		}(chanList,i)
+		}(chanList, i)
 	}
 	select {
-	case <- stopChan:
+	case <-stopChan:
 		println("done")
 	}
 }
@@ -129,7 +127,7 @@ func checkGoroutineErr(errCtx context.Context) error {
 }
 
 func TestErrGroup() {
-	ctx , cancel := context.WithCancel(context.Background())
+	ctx, cancel := context.WithCancel(context.Background())
 	group, errCtx := errgroup.WithContext(ctx)
 
 	for i := 0; i < 3; i++ {
@@ -138,12 +136,12 @@ func TestErrGroup() {
 			fmt.Println("index=", index)
 			if index == 0 {
 				fmt.Println("index == 0, end!")
-			}else if index == 1 {
+			} else if index == 1 {
 				fmt.Println("index == 1, start...")
 				//time.Sleep(time.Second * 3)
 				cancel()
 				fmt.Println("inde == 1, has error!")
-			}else if index == 2 {
+			} else if index == 2 {
 				fmt.Println("index == 2, start...")
 				if err := checkGoroutineErr(errCtx); err != nil {
 					return err
@@ -157,13 +155,12 @@ func TestErrGroup() {
 	err := group.Wait()
 	if err != nil {
 		fmt.Println("Get error: ", err)
-	}else {
+	} else {
 		fmt.Println("All Done!")
 	}
 }
 
-
-type orgList struct{
+type orgList struct {
 	List []org `json:"list"`
 }
 
@@ -191,7 +188,7 @@ type appInfo struct {
 }
 
 type response struct {
-	AppInfo  []appInfo `json:"list"`
+	AppInfo []appInfo `json:"list"`
 }
 
 type JsonResult struct {
@@ -202,7 +199,7 @@ func testMain() {
 	//jsonstr := `{"respCode": "000000","respMsg": "成功","list": [{"orgcode": "d12abd3da59d47e6bf13893ec43730b8"},{"orgcode": "d12abd3da59d47e6bf13893ec43730b8"}]}`
 
 	var JsonRes response
-	value, _:= readFile("/Users/js/orglist.test.txt")
+	value, _ := readFile("/Users/js/orglist.test.txt")
 	json.Unmarshal(value, &JsonRes)
 	fmt.Println("after parse", JsonRes.AppInfo[0].Appid)
 	fmt.Println("after parse", JsonRes.AppInfo[1].Appid)

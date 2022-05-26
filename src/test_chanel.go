@@ -25,7 +25,7 @@ func test2() {
 		num := <-ch
 		fmt.Println("num=", num)
 	}()
-	ch <- 100  // 此处不死锁
+	ch <- 100 // 此处不死锁
 	time.Sleep(time.Second * 3)
 	fmt.Println("finish")
 

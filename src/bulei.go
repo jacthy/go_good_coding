@@ -2,7 +2,7 @@ package main
 
 import "math/rand"
 
-func buLei(n, m, k int) [][]int{
+func buLei(n, m, k int) [][]int {
 	arrList := make([][]int, n)
 	for i := 0; i < len(arrList); i++ {
 		for j := 0; j < m; j++ {
@@ -20,9 +20,9 @@ func buLei(n, m, k int) [][]int{
 		row := lei / n
 		col := lei % n
 		arrList[row][col] = -1
-		println("lei:",row,col)
+		println("lei:", row, col)
 		for _, position := range getShowCountPosition(lei, n, m) {
-			println("leizhouwei:",position.row,position.col)
+			println("leizhouwei:", position.row, position.col)
 			arrList[position.row][position.col]++
 		}
 	}
@@ -82,4 +82,3 @@ func check(arr []int, num int) bool {
 	}
 	return false
 }
-

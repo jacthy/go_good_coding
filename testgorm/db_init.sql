@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `user` (`id` integer,`created_at` datetime,`updated_at` datetime,`deleted_at` datetime,`code` text,`price` integer,PRIMARY KEY (`id`));
