@@ -9,6 +9,7 @@ import (
 	"strconv"
 )
 
+// 位置算法
 func testGeoHash() {
 	lat := 30.549608
 	lon := 114.376971

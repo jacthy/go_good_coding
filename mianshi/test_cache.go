@@ -27,6 +27,7 @@ func testCache()  {
 
 type LRUCache struct {
 	cap   int
+	// 存队头&队尾实现O(1)的复杂度
 	head  *value
 	tail  *value
 	store map[int]*value

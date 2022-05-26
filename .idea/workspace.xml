@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7c2c39e7-1e71-44c8-bba5-c0a2bdfeb31b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/golang-design-pattern" beforeDir="false" afterPath="$PROJECT_DIR$/golang-design-pattern" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/golang-design-pattern/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/golang-design-pattern/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/mianshi/test_cache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_geohash.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_geohash.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,25 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1653581076" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/golang-design-pattern" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -47,12 +66,12 @@
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mianshi" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mianshi" />
       <recent name="$PROJECT_DIR$/sort" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mianshi" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build awesomeProject/test">
@@ -172,10 +191,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="332" y="155" width="615" height="554" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1649738793873" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1653578410676">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1653580703736">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1653578410676" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1653580703736" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
