@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2c39e7-1e71-44c8-bba5-c0a2bdfeb31b" name="Default Changelist" comment="" />
+    <list default="true" id="7c2c39e7-1e71-44c8-bba5-c0a2bdfeb31b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang-design-pattern" beforeDir="false" afterPath="$PROJECT_DIR$/golang-design-pattern" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang-design-pattern/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/golang-design-pattern/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +19,9 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
@@ -22,6 +29,7 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="23SptE6LKrgLE5p8uSGPdvqBlA0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,7 +43,7 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mianshi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
@@ -164,16 +172,16 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="332" y="155" width="615" height="554" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1649738793873" />
-    <state x="305" y="124" key="search.everywhere.popup" timestamp="1649388953936">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1653578410676">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1649388953936" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1653578410676" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/../gopremote/mianshi/futu_1.go</url>
+          <url>file://$PROJECT_DIR$/mianshi/futu_1.go</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
