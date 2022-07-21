@@ -11,6 +11,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.12 // indirect
 	github.com/mmcloughlin/geohash v0.10.0
 	github.com/pkg/errors v0.9.1
+	github.com/smartystreets/goconvey v1.7.2
 	github.com/twpayne/go-geom v1.4.1
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c

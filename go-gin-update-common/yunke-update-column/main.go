@@ -33,8 +33,9 @@ type CustomerOld struct {
 	Name           string // 客户名称
 	ActivityId     int32  // 选房活动ID
 	OrganizationId int32  // 商户ID
-
-	origin Origin
+	IntArr         []int
+	StrArr         []string
+	origin         Origin
 }
 
 func (c *CustomerOldRepo) UpdateCustomer(customer *CustomerOld) error {
@@ -333,7 +334,9 @@ func (origin *Origin) addToMap(a map[string]interface{}, b map[string]interface{
 }
 
 type repoCustomerOld struct {
-	ChooseRoomUserId     int32  `gorm:"primary_key;" relation:"CustomerOld:CustomerId"` // 资格用户ID
-	ChooseRoomActivityId int32  `relation:"CustomerOld:ActivityId"`                     // 活动ID
-	UserName             string `relation:"CustomerOld:Name"`                           // 用户名称
+	ChooseRoomUserId     int32    `gorm:"primary_key;" relation:"CustomerOld:CustomerId"` // 资格用户ID
+	ChooseRoomActivityId int32    `relation:"CustomerOld:ActivityId"`                     // 活动ID
+	UserName             string   `relation:"CustomerOld:Name"`                           // 用户名称
+	IntArr               []int    `relation:"CustomerOld:IntArr"`
+	StrArr               []string `relation:"CustomerOld:IntArr"`
 }

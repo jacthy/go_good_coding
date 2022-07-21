@@ -19,6 +19,8 @@ github.com/golang/protobuf/proto
 # github.com/google/uuid v1.3.0
 ## explicit
 github.com/google/uuid
+# github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1
+github.com/gopherjs/gopherjs/js
 # github.com/jinzhu/inflection v1.0.0
 github.com/jinzhu/inflection
 # github.com/jinzhu/now v1.1.5
@@ -29,6 +31,8 @@ github.com/jinzhu/now
 github.com/jonas-p/go-shp
 # github.com/json-iterator/go v1.1.9
 github.com/json-iterator/go
+# github.com/jtolds/gls v4.20.0+incompatible
+github.com/jtolds/gls
 # github.com/leodido/go-urn v1.2.0
 github.com/leodido/go-urn
 # github.com/looplab/eventhorizon v0.15.5
@@ -38,8 +42,6 @@ github.com/looplab/eventhorizon/aggregatestore/events
 github.com/looplab/eventhorizon/codec/json
 github.com/looplab/eventhorizon/commandhandler/bus
 github.com/looplab/eventhorizon/eventbus/local
-github.com/looplab/eventhorizon/middleware/eventhandler/observer
-github.com/looplab/eventhorizon/tracing
 github.com/looplab/eventhorizon/uuid
 # github.com/mattn/go-isatty v0.0.12
 github.com/mattn/go-isatty
@@ -53,13 +55,19 @@ github.com/mmcloughlin/geohash
 github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742
 github.com/modern-go/reflect2
-# github.com/opentracing/opentracing-go v1.2.0
-github.com/opentracing/opentracing-go
-github.com/opentracing/opentracing-go/ext
-github.com/opentracing/opentracing-go/log
 # github.com/pkg/errors v0.9.1
 ## explicit
 github.com/pkg/errors
+# github.com/smartystreets/assertions v1.2.0
+github.com/smartystreets/assertions
+github.com/smartystreets/assertions/internal/go-diff/diffmatchpatch
+github.com/smartystreets/assertions/internal/go-render/render
+github.com/smartystreets/assertions/internal/oglematchers
+# github.com/smartystreets/goconvey v1.7.2
+## explicit
+github.com/smartystreets/goconvey/convey
+github.com/smartystreets/goconvey/convey/gotest
+github.com/smartystreets/goconvey/convey/reporting
 # github.com/twpayne/go-geom v1.4.1
 ## explicit
 github.com/twpayne/go-geom
